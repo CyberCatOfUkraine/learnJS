@@ -246,3 +246,25 @@ ask("Вы согласны?",()=>alert("Вы согласились."),()=>alert
 
     alert(user.name)*/
 
+4.3
+  /*let id = Symbol("id");
+    alert(id.description); // id*/
+
+    /*// читаем символ из глобального реестра и записываем его в переменную
+    let id = Symbol.for("id"); // если символа не существует, он будет создан
+
+    // читаем его снова в другую переменную (возможно, из другого места кода)
+    let idAgain = Symbol.for("id");
+
+    // проверяем -- это один и тот же символ
+    alert( id === idAgain ); // true
+    alert(id.description+"="+idAgain.description)*/
+
+    /*// получаем символ по имени
+    let sym = Symbol.for("name");
+    let sym2 = Symbol.for("id");
+
+    sym2.kOKOJAMBO="Ojeje"
+    // получаем имя по символу
+    alert( Symbol.keyFor(sym) ); // name
+    alert(sym2.kOKOJAMBO)*/

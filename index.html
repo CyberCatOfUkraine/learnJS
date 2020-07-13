@@ -9,61 +9,57 @@
 </html>
 
 <script>
-    'use strict';
+
     document.write('<script src="http://' +
         (location.host || 'localhost').split(':')[0] +
         ':35729/livereload.js?snipver=1"></' + 'script>');
+    'use strict';
 
-   /* let user={}
-    user.Name="John"
-    user.surname="Smith"
-    alert(user.Name)
-    user.Name="Pete"
-    delete user.Name
-    alert(user.Name)*/
 
-/*    let schedule = {};
-    alert( isEmpty(schedule) ); // true
-    schedule["8:30"] = "get up";
-    alert( isEmpty(schedule) ); // false
-    function isEmpty(someObject){
-    let result=false
-    for (let item in someObject){
-        if (item===undefined||isNaN(item)){
-            result=true
-        }
-    }
-    return !result
-}*/
-   /* let salaries = {
-        John: 100,
-        Ann: 160,
-        Pete: 130
-    }
-    let sum=()=>{
-        let summary=0
-        for(let salary in salaries){
-            summary+=salaries[salary]
-        }
-        alert(summary)
-    }
-    sum()*/
-  /*  let menu = {
-        width: 200,
-        height: 300,
-        title: "My menu"
+    /*let user = {
+        name: "Джон",
+        hi() { alert(this.name); },
+        bye() { alert("Пока"); }
     };
 
-    function multiplyNumeric(object) {
-        for(let key in object){
-            if (!isNaN(object[key])){
-                object[key]*=2
-            }
+    user.hi(); // Джон (простой вызов метода работает хорошо)
+
+    // теперь давайте попробуем вызывать user.hi или user.bye
+    // в зависимости от имени пользователя user.name
+    (user.name === "Джон" ? user.hi() : user.bye())(); // Ошибка!*/
+
+
+   /* let calculator={
+        read:()=>{
+            this.firstValue=prompt("firstValue", "1")
+            this.secondValue=prompt("secondValue", "2")
+        },
+        sum:()=>{
+          return (+this.firstValue)+(+this.secondValue)
+        },
+        mul:()=>{
+            return this.firstValue*this.secondValue
         }
     }
+    calculator.read();
+    alert( calculator.sum() );
+    alert( calculator.mul() );*/
 
-    multiplyNumeric(menu);
-    alert(menu.height+";"+menu.width+";"+menu.title)*/
+    let ladder = {
+        step: 0,
+        up() {
+            this.step++;
+            return this
+        },
+        down() {
+            this.step--;
+            return this
+        },
+        showStep: function() { // показывает текущую ступеньку
+            alert( this.step );
+            return this
+        }
+    };
+    ladder.up().up().down().showStep().down().showStep().up().up().showStep()
 
-    alert({}+[])
 </script>
