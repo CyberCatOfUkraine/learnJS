@@ -1,0 +1,209 @@
+2.4
+
+ let name="Джон";
+    let admin=name;
+    //2)
+    let currentUser=name;
+    let planetName="danunah";
+    alert(admin)
+
+2.5
+let var1=Infinity;
+        let var2=-Infinity;
+alert(`var1: ${typeof var1}`);
+
+2.7
+ alert("px"+4 + 5);
+
+ 18-го февраля 2020
+ Перехват ошибок, "try..catch"
+  function f() {
+         let matHrenb=prompt("который принимает математическое выражение");
+         alert(eval(matHrenb))
+     }
+     try {
+         f()
+     }catch (e) {
+         document.onerror=alert("При ошибке нужно выводить сообщение и просить переввести выражение.")
+         f()
+     }
+     ///window.onerror=alert("Ну типо я alert да ?")
+             //alert("0"==="")
+
+2.9
+alert(prompt("A?","aaaaa"))
+alert("name is: "+prompt("Name: ","user"))
+
+2.10
+let condition=prompt("Какое «официальное» название JavaScript?","ECMASc....")
+        if (condition==="ECMAScript")
+            alert("Верно!")
+        else
+            alert("Не знаете? ECMAScript!")
+
+let result= (a + b < 4)?'Мало': 'Много';
+
+ let message;
+    let  login=prompt("how dare you")
+    message=login==='Сотрудник'?'Привет':
+        login === 'Директор'?'Здравствуйте':
+            login === ''?'Нет логина':'';
+    alert(message)
+
+2.11
+
+    let age =prompt("age","18");
+    if (age>=14||age<=90){
+        alert("ok")
+    }else {
+        alert("not ok")
+    }
+    let age =prompt("age","18");
+    if (age<=13||age>=91){
+        alert("ok")
+    }else {
+        alert("not ok")
+    }
+    let age =prompt("age","18");
+    if (!age>=14||!age<=90){
+        alert("ok")
+    }else {
+        alert("not ok")
+    }
+
+let who=prompt("Кто там?")
+    let text
+    if (who===''||who===null) {
+        text="Отменено"
+    }else if (who==='Админ'){
+        let pass=prompt("пароль?");
+        if (pass===''||pass===null){
+            text="Отменено"
+        }else if (pass==="Я главный"){
+            text="Здравствуйте!"
+        }else{
+            text="Неверный пароль"
+        }
+    }else{
+        text="Я вас не знаю"
+    }
+    alert(text)
+
+2.12
+  let i=0
+    wtf:for (;;){
+        while (i<10){
+            i++
+            alert(i)
+            if (i===5){
+                break wtf;
+            }
+    }
+
+    let i=3
+        while (i){
+            i--
+            alert(i)
+        }
+
+        for (let i=2;i<=10;i++){
+               if (i%2==1)
+                   continue
+               alert(`number ${i}!`)
+            }
+
+
+ let i=0
+    while (i<3){
+       alert( `number ${i}!` );
+        i++
+   }
+
+     let value
+       while(1){
+
+          value= prompt("value")
+           if (value===''||value===null)
+               break
+       if (value<100){
+           alert(" ввести ещё раз")
+       }else{
+           alert("ok")
+           break
+       }
+        }
+
+          let counter
+            let intervalEnd = 100;
+
+            main:
+                for (let i = 2; i <= intervalEnd; i++) {
+                    for (let j = 2; j < i; j++) {
+                        if (i % j === 0) continue main;
+                    }
+                    alert( i );
+                }
+
+2.13
+let browser=prompt("Browser ?")
+    if (browser==='Edge'){
+        alert( "You've got the Edge!" );
+    }else if (browser==='Chrome'||browser==='Firefox'||browser==='Safari'||browser==='Opera'){
+        alert( 'Okay we support these browsers too' );
+    }else{
+        alert( 'We hope that this page looks ok!' );
+    }
+
+    switch ( +prompt('Введите число между 0 и 3', '')) {
+    case 0:
+        alert('Вы ввели число 0');
+        break;
+    case 1:
+        alert('Вы ввели число 1');
+        break;
+    case 2:
+        case 3:
+            alert('Вы ввели число 2, а может и 3');
+        break;
+
+2.14
+function checkAge(age) {
+        return (age > 18)?true:confirm('Родители разрешили?');
+    }
+    alert(checkAge(prompt("Age")))
+
+    function testForMinValue(a,b) {
+        return (a<b)?"a":"b"
+        }
+        alert(testForMinValue(prompt("A"),prompt("B")))
+function pow(x,n) {
+        if (n < 1) {
+            return(`Степень ${n} не поддерживается, используйте натуральное число`);
+
+        }
+
+        let result=x
+        for (let i = 1; i <n ; i++) {
+            result*=x
+        }
+        return result;
+    }
+    alert(pow(prompt("number"),prompt("power")))
+
+2.15
+let alarm=function a(x){
+        alert(x)
+    }
+
+    alarm(12)
+
+2.16
+let krya =()=> alert("krya")
+
+    krya()
+
+
+let ask=(question, yes, no)=>confirm(question)?yes():no();
+ask("Вы согласны?",()=>alert("Вы согласились."),()=>alert("Вы отменили выполнение."))
+
+2.17
