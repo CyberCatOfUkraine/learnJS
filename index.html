@@ -8,58 +8,68 @@
 </body>
 </html>
 
-<script>
+<script type="text/javascript">
 
     document.write('<script src="http://' +
         (location.host || 'localhost').split(':')[0] +
         ':35729/livereload.js?snipver=1"></' + 'script>');
     'use strict';
 
+/*  function createUser(name,age) {
+    return {name,age,isUser:true,getUser:()=>{return this}}
+  }
 
-    /*let user = {
-        name: "Джон",
-        hi() { alert(this.name); },
-        bye() { alert("Пока"); }
-    };
-
-    user.hi(); // Джон (простой вызов метода работает хорошо)
-
-    // теперь давайте попробуем вызывать user.hi или user.bye
-    // в зависимости от имени пользователя user.name
-    (user.name === "Джон" ? user.hi() : user.bye())(); // Ошибка!*/
-
-
-   /* let calculator={
-        read:()=>{
-            this.firstValue=prompt("firstValue", "1")
-            this.secondValue=prompt("secondValue", "2")
-        },
-        sum:()=>{
-          return (+this.firstValue)+(+this.secondValue)
-        },
-        mul:()=>{
-            return this.firstValue*this.secondValue
-        }
+  let user1=new createUser("user1",20)
+    let name ="A?"
+    let username=user1.getUser().name;
+  alert(username)*/
+   /* function createUser(username){
+        return {username,isAdmin:false,simpleText:"text"}
     }
-    calculator.read();
-    alert( calculator.sum() );
-    alert( calculator.mul() );*/
+    let username1=new createUser("user1")
+    let username2=new createUser("user2")
 
-    let ladder = {
-        step: 0,
-        up() {
-            this.step++;
-            return this
-        },
-        down() {
-            this.step--;
-            return this
-        },
-        showStep: function() { // показывает текущую ступеньку
-            alert( this.step );
-            return this
-        }
-    };
-    ladder.up().up().down().showStep().down().showStep().up().up().showStep()
+    username2.username="userA"
 
+    alert(username1.username)*/
+
+/*    let obj = {};
+
+    function A() { return obj; }
+    function B() { return obj; }
+
+    alert( new A() === new B() ); // true*/
+
+ /*   function Calculator(){
+        return {read:()=>{
+                this.first=prompt("first")
+                this.second=prompt("second")
+            },
+            sum:()=>{
+                return (+this.first)+(+this.second)
+            },
+            mul:()=>{
+                return (+this.first)*(+this.second)
+            }}
+
+    }
+    let a=new Calculator()
+    a.read()
+    alert(a.sum())
+    alert(a.mul())*/
+
+    function Accumulator(startingValue) {
+
+            this.value=startingValue
+            this.read=()=>{
+                this.value+=(+prompt("Number"))
+            }
+
+    }
+    let accumulator = new Accumulator(1); // начальное значение 1
+
+      accumulator.read(); // прибавит ввод prompt к текущему значению
+      accumulator.read(); // прибавит ввод prompt к текущему значению
+
+    alert(accumulator.value); // выведет сумму этих значений
 </script>
